@@ -30,7 +30,7 @@ public class Client_SSL {
 			System.out.printf("Using: %s://%s:%d user: %s pass: %s\n", REMOTE_HTTPS, host, REMOTE_HTTPS_PORT, USERNAME, PASSWORD);
 			System.out.println("------------------------------------------------------------------------------");
 			Context ctx = getInitialContext(REMOTE_HTTPS, host, REMOTE_HTTPS_PORT, USERNAME, PASSWORD);
-			Hello hello = (Hello) ctx.lookup( "ejb:/testejb01/Test!com.org.Hello");
+			Hello hello = (Hello) ctx.lookup( "ejb:/EJB-TEST/Test!com.org.Hello");
 
 			System.out.println("\n\n\n* * * * * * * * * * * * * * * * * * * * * * * * * * * * * *");
 			System.out.println(hello.hello());

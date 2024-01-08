@@ -31,9 +31,11 @@ public class Client_SSL {
 			System.out.printf("Using: %s://%s:%d user: %s pass: %s\n", REMOTE_HTTPS, host, REMOTE_HTTPS_PORT, USERNAME, PASSWORD);
 			System.out.println("------------------------------------------------------------------------------");
 			Context ctx = getInitialContext(REMOTE_HTTPS, host, REMOTE_HTTPS_PORT, USERNAME, PASSWORD);
-			Hello ejb = (Hello) ctx.lookup(lookup);
-			System.out.printf("hello: %s\n", ejb.hello());
-			System.out.println("------------------------------------------------------------------------------");
+			Hello hello = (Hello) ctx.lookup( "ejb:/testejb01/Test!com.org.Hello");
+
+			System.out.println("\n\n\n* * * * * * * * * * * * * * * * * * * * * * * * * * * * * *");
+			System.out.println(hello.hello());
+			System.out.println("* * * * * * * * * * * * * * * * * * * * * * * * * * * * * *");
 			System.out.flush();
 		} catch(Exception e) {
 			e.printStackTrace();

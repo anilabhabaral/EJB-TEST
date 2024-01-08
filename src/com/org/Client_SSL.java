@@ -25,7 +25,6 @@ public class Client_SSL {
 	public static void main(String[] args) throws Exception {
 
 		String host = "localhost";
-		final String lookup = "ejbapp/Hello!com.jboss.examples.ejb.Hello";
 
 		try {
 			System.out.printf("Using: %s://%s:%d user: %s pass: %s\n", REMOTE_HTTPS, host, REMOTE_HTTPS_PORT, USERNAME, PASSWORD);

@@ -6,6 +6,7 @@ import javax.naming.Context;
 import javax.naming.NamingException;
 
 /*
+
 Run this client using the following command:
 ****************
 java -Djavax.net.ssl.trustStore=client.keystore -Djavax.net.ssl.trustStorePassword=password -cp bin/client/jboss-client.jar:standalone/deployments/EJB-TEST.jar com.org.Client_SSL
